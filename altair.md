@@ -1,14 +1,14 @@
 # Chuleta de Altair
 
-## Import
+### Import
 ```python
 import pandas as pd
 import altair as alt
 ```
 
-## Bar Chart
+### Bar Chart
 ```python
-alt.Chart(brain).mark_bar().encode(
+alt.Chart(df).mark_bar().encode(
     x="",
     y=""
 ).properties(
@@ -17,17 +17,17 @@ alt.Chart(brain).mark_bar().encode(
 )
 ```
 
-## Scatter plot
+### Scatter plot
 ```python
-alt.Chart(brain).mark_point().encode(
+alt.Chart(df).mark_point().encode(
     x='',
     y=''
 )
 ```
 
-## Line Chart
+### Line Chart
 ```python
-alt.Chart(trends).mark_line().encode(
+alt.Chart(df).mark_line().encode(
     x='',
     y='',
     color=''
@@ -36,4 +36,20 @@ alt.Chart(trends).mark_line().encode(
     height=300,
     title='Graph title'
 )
+```
+
+# Combining
+### Layering
+```python
+chart1 + chart2
+```
+
+### Horizontal Concatenation
+```python
+chart1 | chart2
+```
+
+### Vertical Concatenation
+```python
+chart1 & chart2
 ```
